@@ -1,0 +1,67 @@
+<!dohttps://github.com/signup?social=truectype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Playboy Dotious — Dark Quotes</title>
+  <style>
+    body {
+      margin:0;
+      padding:0;
+      background:#000;
+      color:#fff;
+      font-family: 'Courier New', monospace;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      height:100vh;
+    }
+    .quote-box {
+      max-width: 80%;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      padding:20px;
+      border: 1px solid #444;
+      border-radius: 10px;
+      background: rgba(20,20,20,0.8);
+      box-shadow: 0 0 20px rgba(255,0,0,0.4);
+    }
+    button {
+      margin-top:20px;
+      padding:10px 20px;
+      background:#111;
+      border:1px solid #fff;
+      color:#fff;
+      font-size:1rem;
+      cursor:pointer;
+      border-radius:5px;
+    }
+    button:hover {
+      background:#fff;
+      color:#000;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box">
+    <div id="quote">Click below to summon a dark quote...</div>
+    <button onclick="newQuote()">Summon</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Even the light fears me when night calls my name.",
+      "My silence is louder than your screams.",
+      "Dotious is your god.",
+      "Darkness is not where I hide, it’s where I reign.",
+      "Fear is just respect wearing a mask."
+    ];
+
+    function newQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[random];
+    }
+  </script>
+</body>
+</html>
